@@ -10,4 +10,5 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 # SQLite bazasi uchun faylni nusxalash
 COPY bot_data.db . 
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
